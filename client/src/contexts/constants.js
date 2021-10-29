@@ -1,4 +1,4 @@
-export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000/api' : 'something'
+export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000/api' : 'https://learn01.herokuapp.com/api'
 export const LOCAL_STORAGE_TOKEN_NAME = 'learn01'
 export const POST_LOADED_SUCCESS = 'POST_LOADED_SUCCESS'
 export const POST_LOADED_FAIL = 'POST_LOADED_FAIL'

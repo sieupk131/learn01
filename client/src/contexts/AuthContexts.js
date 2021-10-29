@@ -21,18 +21,18 @@ const AuthContextProvider = ({ children }) => {
             const response = await axios.get(`${apiUrl}/auth`)
             if (response.data.success) {
                 dispatch({ type: SET_AUTH, payload: response.data.user })
-                return { success: true, message: response.data.message }
+                // return { success: true, message: response.data.message }
             }
             else {
                 dispatch({ type: DEL_AUTH })
-                return { success: false, message: response.data.message }
+                // return { success: false, message: response.data.message }
             }
         } catch (error) {
             console.log(error)
             localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME)
             setAuthToken(null)
             dispatch({ type: DEL_AUTH })
-            return (error.response.data) ? error.response.data : { success: false, message: 'Server error' }
+            // return (error.response.data) ? error.response.data : { success: false, message: 'Server error' }
         }
     }, [])
     useEffect(() => loadUser(), [loadUser])
