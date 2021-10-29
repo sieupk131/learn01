@@ -1,0 +1,45 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "phivu",
+    "password":"1234"
+}
+
+###
+
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "phivu",
+    "password":"1234"
+}
+###
+POST  http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYzMTBiN2ZiNzM4YzE3YjVlZTVhNmQiLCJpYXQiOjE2MzUxODQ4Mzh9._1yHp7mOk8qtqKZy9lMAge-Fv2PprUH0HAjobVH-FxM
+
+{
+    "title": "ReactJS",
+    "description": "Reactjs",
+    "url": "js.com",
+    "status": "TO LEARN"
+}
+###
+GET http://localhost:5000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYzMTgxMGFmMzFiMjQ0NDdiMDYwYzgiLCJpYXQiOjE2MzM4ODQxNzZ9.lL6Qdf06O4kbOngg8dNjQLDQq9SUFneN0il2O3RMmwM
+###
+PUT http://localhost:5000/api/posts/61646d0be0a727130ead7173
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYzMTBiN2ZiNzM4YzE3YjVlZTVhNmQiLCJpYXQiOjE2MzUxODQ3OTd9.rWy7i0Xmw_pNgUCKCVHWDq2ny6YtckfNFHYmL8jiK7A
+
+{
+    "title": "Javascript_2",
+    "description": "Javascript level2",
+    "url": "js.com",
+    "status": "LEARNING"
+}
+###
+DELETE http://localhost:5000/api/posts/61783aaf8395b74b40c53f52
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTYzMTBiN2ZiNzM4YzE3YjVlZTVhNmQiLCJpYXQiOjE2MzU0Mjc3MTZ9.MNfq9o0FFlJDs33k22vMyk-Fxos8qRsLpDlApFHBHOg
